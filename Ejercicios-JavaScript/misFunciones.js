@@ -116,7 +116,40 @@ ctx.beginPath();
         i = i + 20;
     }
 
+}
 
+function fnSuma() {
+    let num1, num2;
 
+    num1 = document.getElementById("nums1").value;
+    num2 = document.getElementById("nums2").value;
 
+    document.getElementById("totalS").value = Number(num1) + Number(num2);
+}
+
+function fnResta() {
+    let num1, num2;
+
+    num1 = document.getElementById("numr1").value;
+    num2 = document.getElementById("numr2").value;
+
+    document.getElementById("totalR").value = Number(num1) - Number(num2);
+}
+
+function fnProducto() {
+    let num1, num2;
+
+    num1 = document.getElementById("numm1").value;
+    num2 = document.getElementById("numm2").value;
+
+    document.getElementById("totalM").value = Number(num1) * Number(num2);
+}
+
+function fnDivision() {
+    let num1, num2;
+
+    num1 = document.getElementById("numd1").value;
+    num2 = document.getElementById("numd2").value;
+
+    document.getElementById("totalD").value = Number(num1) / Number(num2);
 }
