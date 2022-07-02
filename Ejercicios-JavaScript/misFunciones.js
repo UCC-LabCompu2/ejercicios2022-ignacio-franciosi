@@ -60,8 +60,8 @@ if (valorMO=="val_mostrar"){
 }
 
 
-function animarAuto(posX,posY) {
-    var canvas = document.getElementById("myCanvasXY");
+function dibujarImagen(posX,posY) {
+    var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
     console.log(posX, posY);
