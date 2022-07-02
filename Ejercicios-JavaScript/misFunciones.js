@@ -119,37 +119,58 @@ ctx.beginPath();
 }
 
 function fnSuma() {
-    let num1, num2;
+    var num1, num2;
 
-    num1 = document.getElementById("nums1").value;
-    num2 = document.getElementById("nums2").value;
+    num1 = Number(document.getElementsByName("sum_num1")[0].value);
+    num2 = Number(document.getElementsByName("sum_num2")[0].value);
 
-    document.getElementById("totalS").value = Number(num1) + Number(num2);
+    document.getElementsByName("sum_total")[0].innerHTML= num1 + num2;
 }
 
 function fnResta() {
-    let num1, num2;
+    var num1, num2;
 
-    num1 = document.getElementById("numr1").value;
-    num2 = document.getElementById("numr2").value;
+    num1 = Number(document.getElementsByName("res_num1")[0].value);
+    num2 = Number(document.getElementsByName("res_num2")[0].value);
 
-    document.getElementById("totalR").value = Number(num1) - Number(num2);
+    document.getElementsByName("res_total")[0].innerHTML= num1 - num2;
 }
 
 function fnProducto() {
-    let num1, num2;
+    var num1, num2;
 
-    num1 = document.getElementById("numm1").value;
-    num2 = document.getElementById("numm2").value;
+    num1 = Number(document.getElementsByName("mul_num1")[0].value);
+    num2 = Number(document.getElementsByName("mul_num2")[0].value);
 
-    document.getElementById("totalM").value = Number(num1) * Number(num2);
+    document.getElementsByName("mul_total")[0].innerHTML= num1 * num2;
 }
 
 function fnDivision() {
-    let num1, num2;
+    var num1, num2;
 
-    num1 = document.getElementById("numd1").value;
-    num2 = document.getElementById("numd2").value;
+    num1 = Number(document.getElementsByName("div_num1")[0].value);
+    num2 = Number(document.getElementsByName("div_num2")[0].value);
 
-    document.getElementById("totalD").value = Number(num1) / Number(num2);
+    document.getElementsByName("div_total")[0].innerHTML= num1 / num2;
+}
+
+function cargarWeb(){
+    var cant, unidad, urlComp;
+
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+
+    urlComp = "segundaWeb.html#" + cant + "#" + unidad;
+    window.open(urlComp);
+}
+
+function cargarResultado(){
+    var urlComp, can, un;
+
+    urlComp = window.location.href.split("/") [5];
+
+    can = urlComp.split("#") [1];
+    un = urlComp.split( "#") [2];
+
+    document.getElementById( "dist").value = can + " " + un;
 }
