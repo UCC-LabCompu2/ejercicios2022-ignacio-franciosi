@@ -174,3 +174,30 @@ function cargarResultado(){
 
     document.getElementById( "dist").value = can + " " + un;
 }
+
+function borrarPaint(){
+    let canvas = document.getElementById("lienzoDibujo");
+    let ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}
+
+function cargarListener(){
+    document.getElementById("lienzoDibujo").addEventListener("mousemove", function(event){
+        let canvas = document.getElementById("lienzoDibujo");
+        let ctx = canvas.getContext("2d");
+
+        let mouseX = event.clientX;
+        let mouseY = event.clientY;
+
+        console.log(mouseX, mouseY);
+
+        canvas.onmousedown = function(){bandera = true};
+        canvas.onmouseup = function(){bandera = false};
+        if(bandera){
+            ctx.fillRect(mouseX-10, mouseY-10, 5, 5);
+        }
+
+    });
+}
+
